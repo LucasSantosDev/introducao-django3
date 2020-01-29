@@ -1,0 +1,12 @@
+{% extends 'master.html' %} {% block content %}
+<div class="container">
+  <h1>Post {{ post.id }}</h1>
+
+  <p>{{ post.title }}</p>
+
+  {{ post.content }}
+
+  <p>Autor</p>
+  {{ post.user.first_name |add:' '| add:post.user.last_name }}
+</div>
+{% endblock %}
